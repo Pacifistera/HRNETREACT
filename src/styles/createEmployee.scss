@@ -1,0 +1,125 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  width: 25%;
+
+  min-width: 350px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      label {
+        text-align: left;
+      }
+
+      input,
+      select {
+        width: 100%;
+
+        &.error {
+          border: 1px solid #dc3545;
+        }
+      }
+
+      .error-message {
+        color: #dc3545;
+        font-size: 12px;
+        margin-top: 5px;
+        text-align: left;
+      }
+    }
+
+    .address {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: none;
+      legend {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        text-align: left;
+      }
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      padding: 5px 5px;
+      border-radius: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+// Style pour le bouton désactivé
+button[type='submit'] {
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}
+
+.form-group {
+  input.error,
+  select.error {
+    border: 1px solid #dc3545;
+  }
+
+  .error-message {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
